@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "eslint 'App/' 'index.ios.js' 'index.android.js'"
+    "test": "eslint 'App/' 'index.ios.js' 'index.android.js'",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "immutable": "=3.8.1",
     "react": "=15.1.0",
     "react-addons-pure-render-mixin": "=15.1.0",
-    "react-native": "=0.27.1",
+    "react-native": "0.54.0",
     "react-native-sound": "=0.8.3",
     "react-native-vector-icons": "=2.0.3",
     "react-redux": "=4.4.5",
@@ -20,7 +22,8 @@
     "redux-storage-engine-reactnativeasyncstorage": "=1.0.0",
     "redux-storage-merger-immutablejs": "=1.0.1",
     "redux-thunk": "=2.1.0",
-    "underscore": "=1.8.3"
+    "underscore": "=1.8.3",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "babel-eslint": "=6.0.4",
@@ -28,5 +31,6 @@
     "eslint-plugin-react": "=5.1.1",
     "eslint-plugin-react-native": "=1.1.0-beta",
     "redux-logger": "=2.6.1"
-  }
+  },
+  "snyk": true
 }
